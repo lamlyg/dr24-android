@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainfeed"
+        android:icon="@drawable/feed"
+        android:title="메인 피드"
+        />
+
+    <item
+        android:id="@+id/mycigarette"
+        android:icon="@drawable/vaper"
+        android:title="내 담배"
+        />
+
+    <item
+        android:id="@+id/chart"
+        android:icon="@drawable/chart"
+        android:title="차트"
+        />
+
+    <item
+        android:id="@+id/alarm"
+        android:icon="@drawable/notification"
+        android:title="알람"
+        />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/settings"
+        android:title="설정"
+        />
+
+</menu>
