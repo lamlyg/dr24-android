@@ -21,14 +21,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 public class ChartActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ViewFlipper imgBanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chart);
+
+        imgBanner=findViewById(R.id.imgBanner);
+
+        int sliders[]= {
+                R.drawable.b1, R.drawable.b2, R.drawable.b3
+//                R.layout.v1, R.layout.v2, R.layout.v3
+        };
+        for(int slide:sliders){
+            bannerFliper(slide);
+        }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -47,6 +62,19 @@ public class ChartActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public void bannerFliper(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setImageResource(image);
+//        TextView imageView = new TextView(this);
+//        imageView.setBackgroundResource(image);
+        imgBanner.addView(imageView);
+        imgBanner.setFlipInterval(4000);
+        imgBanner.setAutoStart(true);
+        imgBanner.setInAnimation(this, android.R.anim.fade_in);
+        imgBanner.setOutAnimation(this,android.R.anim.fade_out);
+
     }
 
     @Override

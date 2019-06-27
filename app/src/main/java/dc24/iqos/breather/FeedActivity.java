@@ -23,6 +23,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ViewFlipper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,6 +35,8 @@ public class FeedActivity extends AppCompatActivity
 
     private RecyclerAdapter adapter;
     private DateRecyclerAdapter dateadapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,7 @@ public class FeedActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
     }
+
 
     @Override
     public void onBackPressed() {
