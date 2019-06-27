@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="104dp"
-    android:background="#959595"
+    android:background="#0062FF"
     android:gravity="bottom"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -30,6 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="16dp"
         android:text="김닥터"
+        android:textColor="@color/colorWhite"
         android:textSize="14dp"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

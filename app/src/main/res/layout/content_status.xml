@@ -21,17 +21,17 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="70dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:layout_gravity="center"
             android:src="@drawable/iqos"
             />
-        <TextView
-            android:layout_width="95dp"
-            android:layout_height="20dp"
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
             android:text="CONNECTED"
-            android:textSize="16dp"
+            android:textSize="11dp"
             />
     </LinearLayout>
     <LinearLayout
