@@ -67,6 +67,7 @@
                 android:text="자세히 보기 >"
                 android:textColor="#525252"
                 android:textStyle="bold"
+                android:id="@+id/gochart_btn"
                 />
 
         </LinearLayout>
