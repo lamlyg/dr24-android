@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.os.SystemClock;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -22,6 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class StatusActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,6 +44,25 @@ public class StatusActivity extends AppCompatActivity
                 startActivity(intent);
                 overridePendingTransition(0, 0);//화면전환 효과 제거
             }
+        });
+        Button connect = findViewById(R.id.connect);
+        final ConnectInfo info = new ConnectInfo();
+        connect.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                SystemClock.sleep(1000);
+
+                Toast.makeText(getApplicationContext(),"연결 완료", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
+        connect.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                info.getEndTime();
+                Toast.makeText(getApplicationContext(),"연결 종료", Toast.LENGTH_SHORT).show();
+            }
+
         });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
