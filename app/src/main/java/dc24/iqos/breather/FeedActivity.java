@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import java.util.Arrays;
@@ -32,6 +33,8 @@ import java.util.List;
 
 public class FeedActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    final ConnectInfo info = new ConnectInfo();
 
     private RecyclerAdapter adapter;
     private DateRecyclerAdapter dateadapter;
@@ -43,6 +46,8 @@ public class FeedActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
 
+        final TextView howmany = findViewById(R.id.howmany);
+        howmany.setText(info.count + "개피");
         init();
         getData();
 
@@ -142,9 +147,12 @@ public class FeedActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
     }
 
+
+
     private void getData() {
         // 임의의 데이터입니다.
-
+        int mone = info.count*4500;
+        String money = "저축"+mone+"";
         List<String> listContent = Arrays.asList(
                 "저축 130만원",
                 "잠 057시간",
