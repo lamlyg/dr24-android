@@ -22,13 +22,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
-public class FeedActivity extends AppCompatActivity
+public class MoreActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feed);
+        setContentView(R.layout.activity_more);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,19 +88,19 @@ public class FeedActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.mainfeed) {
-            Intent intent=new Intent(FeedActivity.this, FeedActivity.class);
+            Intent intent=new Intent(MoreActivity.this, FeedActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.status) {
-            Intent intent=new Intent(FeedActivity.this, StatusActivity.class);
+            Intent intent=new Intent(MoreActivity.this, StatusActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.chart) {
-            Intent intent=new Intent(FeedActivity.this, ChartActivity.class);
+            Intent intent=new Intent(MoreActivity.this, ChartActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.more) {
-            Intent intent=new Intent(FeedActivity.this, MoreActivity.class);
+            Intent intent=new Intent(MoreActivity.this, MoreActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         }

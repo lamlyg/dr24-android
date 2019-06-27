@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeedActivity">
+    tools:context=".ChartActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,19 +22,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BREATHER"
-                android:layout_marginLeft="120dp"
+                android:text="Chart"
+                android:layout_marginLeft="130dp"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
                 android:textSize="15dp"
-                android:id="@+id/toolbar_feed"
+                android:id="@+id/toolbar_chart"
                 />
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_feed" />
+    <include layout="@layout/content_chart" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

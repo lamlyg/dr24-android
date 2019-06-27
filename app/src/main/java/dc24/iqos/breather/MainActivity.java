@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
             // 4초뒤에 다음화면(MainActivity)으로 넘어가기 Handler 사용
             Intent intent = new Intent(getApplicationContext(), FeedActivity.class);
             startActivity(intent); // 다음화면으로 넘어가기
+            overridePendingTransition(0, 0);//화면전환 효과 제거
             finish(); // Activity 화면 제거
         }
     };
