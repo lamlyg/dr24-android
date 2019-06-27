@@ -23,7 +23,7 @@
         app:headerLayout="@layout/nav_header_feed"
         app:menu="@menu/activity_feed_drawer"
         android:background="#D5D5D5"
-        app:itemTextColor="@color/colorBlack"
+        app:itemTextColor="#747474"
         app:itemIconTint="@color/colorWhite"
         />
 
