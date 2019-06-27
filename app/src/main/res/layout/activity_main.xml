@@ -15,4 +15,5 @@
         android:src="@drawable/lung"
         android:scaleType="fitXY"
         android:id="@+id/imageView" />
+
 </LinearLayout>
