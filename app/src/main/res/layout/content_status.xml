@@ -10,67 +10,80 @@
     tools:layout_editor_absoluteY="56dp"
     tools:showIn="@layout/app_bar_status">
 
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:background="@drawable/white_roundshape"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:src="@drawable/iqos"
-            />
-        <Button
-            android:id="@+id/connect"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:text="CONNECTED"
-            android:textSize="11dp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical"
-        android:background="@color/colorWhite"
-        >
+
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:background="@color/colorWhite"
-            >
-            <TextView
-                android:layout_width="90dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
-                android:text="날짜 별 흡연량"
-                android:textColor="#525252"
-                android:textStyle="bold"
-                />
+            android:layout_width="280dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/white_roundshape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/iqos" />
 
             <Button
-                android:layout_width="102dp"
+                android:id="@+id/connect"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="CONNECTED"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="140dp"
                 android:layout_marginTop="10dp"
-                android:background="#00ff0000"
-                android:text="자세히 보기 >"
-                android:textColor="#525252"
-                android:textStyle="bold"
-                android:id="@+id/gochart_btn"
-                />
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="날짜 별 흡연량"
+                    android:textColor="#525252"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gochart_btn"
+                    android:layout_width="102dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00ff0000"
+                    android:text="자세히 보기 >"
+                    android:textColor="#525252"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="350dp" />-->
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.github.mikephil.charting.charts.BarChart>
 
         </LinearLayout>
-    </LinearLayout>
+
 </LinearLayout>

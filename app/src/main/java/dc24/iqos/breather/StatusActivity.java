@@ -3,8 +3,11 @@ package dc24.iqos.breather;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import android.os.SystemClock;
 import android.view.View;
@@ -25,10 +28,13 @@ import android.view.Menu;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class StatusActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button gochart_btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +43,11 @@ public class StatusActivity extends AppCompatActivity
 
         gochart_btn = findViewById(R.id.gochart_btn);
 
+
         gochart_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(StatusActivity.this, ChartActivity.class);
+                Intent intent = new Intent(StatusActivity.this, ChartActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);//화면전환 효과 제거
             }
@@ -52,15 +59,15 @@ public class StatusActivity extends AppCompatActivity
             public boolean onLongClick(View view) {
                 SystemClock.sleep(1000);
 
-                Toast.makeText(getApplicationContext(),"연결 완료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "연결 완료", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
-        connect.setOnClickListener(new View.OnClickListener(){
+        connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 info.getEndTime();
-                Toast.makeText(getApplicationContext(),"연결 종료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "연결 종료", Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -122,19 +129,19 @@ public class StatusActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.mainfeed) {
-            Intent intent=new Intent(StatusActivity.this, FeedActivity.class);
+            Intent intent = new Intent(StatusActivity.this, FeedActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.status) {
-            Intent intent=new Intent(StatusActivity.this, StatusActivity.class);
+            Intent intent = new Intent(StatusActivity.this, StatusActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.chart) {
-            Intent intent=new Intent(StatusActivity.this, ChartActivity.class);
+            Intent intent = new Intent(StatusActivity.this, ChartActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.more) {
-            Intent intent=new Intent(StatusActivity.this, MoreActivity.class);
+            Intent intent = new Intent(StatusActivity.this, MoreActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         }
