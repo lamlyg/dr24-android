@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".LikeActivity"
+            android:label="@string/title_activity_like"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ChartActivity"
             android:label="@string/title_activity_chart"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StatusActivity"
             android:label="@string/title_activity_status"
@@ -28,6 +32,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

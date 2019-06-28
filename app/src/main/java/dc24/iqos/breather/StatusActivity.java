@@ -140,6 +140,10 @@ public class StatusActivity extends AppCompatActivity
             Intent intent = new Intent(StatusActivity.this, ChartActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
+        } else if (id == R.id.like) {
+            Intent intent=new Intent(StatusActivity.this, LikeActivity.class);
+            startActivity(intent);
+            overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.more) {
             Intent intent = new Intent(StatusActivity.this, MoreActivity.class);
             startActivity(intent);

@@ -18,7 +18,7 @@ public class ConnectInfo  {
     public long Start = 0;
     public long End = 0;
     public Date mDate;
-    SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    SimpleDateFormat mFormat = new SimpleDateFormat("    MM월                 dd일                 hh시 mm분");
 
     public ConnectInfo()
     {

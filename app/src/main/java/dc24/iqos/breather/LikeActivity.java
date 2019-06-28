@@ -22,13 +22,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
-public class MoreActivity extends AppCompatActivity
+public class LikeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_more);
+        setContentView(R.layout.activity_like);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,7 +62,7 @@ public class MoreActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.feed, menu);
+        getMenuInflater().inflate(R.menu.like, menu);
         return true;
     }
 
@@ -88,23 +88,23 @@ public class MoreActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.mainfeed) {
-            Intent intent=new Intent(MoreActivity.this, FeedActivity.class);
+            Intent intent=new Intent(LikeActivity.this, FeedActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.status) {
-            Intent intent=new Intent(MoreActivity.this, StatusActivity.class);
+            Intent intent=new Intent(LikeActivity.this, StatusActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.chart) {
-            Intent intent=new Intent(MoreActivity.this, ChartActivity.class);
+            Intent intent=new Intent(LikeActivity.this, ChartActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.like) {
-            Intent intent=new Intent(MoreActivity.this, LikeActivity.class);
+            Intent intent=new Intent(LikeActivity.this, LikeActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.more) {
-            Intent intent=new Intent(MoreActivity.this, MoreActivity.class);
+            Intent intent=new Intent(LikeActivity.this, MoreActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
         }

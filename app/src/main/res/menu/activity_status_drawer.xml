@@ -18,6 +18,10 @@
             android:title="chart"
             />
         <item
+            android:id="@+id/like"
+            android:icon="@drawable/like"
+            android:title="like" />
+        <item
             android:id="@+id/more"
             android:icon="@drawable/settings"
             android:title="more" />

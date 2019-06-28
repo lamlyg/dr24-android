@@ -28,7 +28,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class FeedActivity extends AppCompatActivity
@@ -124,6 +127,10 @@ public class FeedActivity extends AppCompatActivity
             Intent intent = new Intent(FeedActivity.this, ChartActivity.class);
             startActivity(intent);
             overridePendingTransition(0, 0);//화면전환 효과 제거
+        } else if (id == R.id.like) {
+            Intent intent=new Intent(FeedActivity.this, LikeActivity.class);
+            startActivity(intent);
+            overridePendingTransition(0, 0);//화면전환 효과 제거
         } else if (id == R.id.more) {
             Intent intent = new Intent(FeedActivity.this, MoreActivity.class);
             startActivity(intent);
@@ -151,13 +158,22 @@ public class FeedActivity extends AppCompatActivity
 
     private void getData() {
         // 임의의 데이터입니다.
-        int mone = info.count*4500;
-        String money = "저축"+mone+"";
+        int temp = info.count*225;
+        int mone = temp;
+        int slee = temp*6;
+        int coff = temp/2500;
+        int chi = temp/5000;
+
+        String money = "저축 "+mone+"원";
+        String sleep = "잠 "+slee+"분";
+        String coffee = "커피 "+coff+"잔";
+        String chicken = "치킨 "+chi+"마리";
+
         List<String> listContent = Arrays.asList(
-                "저축 130만원",
-                "잠 057시간",
-                "커피 056잔",
-                "치킨13마리"
+                money,
+                sleep,
+                coffee,
+                chicken
         );
         List<Integer> listResId = Arrays.asList(
                 R.drawable.money,
@@ -199,6 +215,7 @@ public class FeedActivity extends AppCompatActivity
                 "6월",
                 "6월"
         );
+
         List<String> listDay1 = Arrays.asList(
                 "13일",
                 "13일",
@@ -218,7 +235,7 @@ public class FeedActivity extends AppCompatActivity
                 "19:42"
         );
 
-        for (int i = 0; i < listDay2.size(); i++) {
+        for (int i = 0; i < listMonth.size(); i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.
             SmokData datedata = new SmokData();
             datedata.setMonth(listMonth.get(i));
