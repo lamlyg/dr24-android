@@ -1,6 +1,7 @@
 # 금연 도우미 모바일 어플리케이션 '담소' (Android)
 2019년 Openhack 해커톤 프로젝트 '담소' Android <br />
 - Project execution period : 2019.06.27~2019.06.28 <br/>
+- Organization link : [dr-24](https://github.com/dr-24)
 - email address : lamlyg@naver.com <br />
 
 <br/>
@@ -68,4 +69,4 @@
 
 
 ## Final Presentation PPT
-[Presentation]
+[Presentation](https://github.com/lamlyg/dr24-android/blob/master/presentation.pdf)
