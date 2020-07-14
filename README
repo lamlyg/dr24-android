@@ -21,11 +21,12 @@
 - targetSdkVersion : 28
 
 ## Detail Information
-### Flow Design
-<img width="608" alt="workFlow" src="https://user-images.githubusercontent.com/33417495/86379495-e1237d00-bcc5-11ea-8c2d-08ba78bd2f17.png">
+
+<src="https://user-images.githubusercontent.com/33417495/86379495-e1237d00-bcc5-11ea-8c2d-08ba78bd2f17.png">
 
 
-## 
+## UI
+
 - 메인 페이지
  지금까지 사용한 담배의 개수를 파악하고 그에 상응하는 수면 시간, 치킨 , 커피, 저축양 등을 보여줍니다.
 
@@ -57,4 +58,4 @@
 
 
 ## Final Presentation PPT
-[Presentation]()
+[Presentation]
